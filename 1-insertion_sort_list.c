@@ -45,4 +45,3 @@ void insertion_sort_list(listint_t **list)
 			tmp = aux, flag = false;
 	}
 }
-
