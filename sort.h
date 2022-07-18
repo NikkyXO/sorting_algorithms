@@ -1,8 +1,15 @@
 #ifndef __SORT_H
 #define __SORT_H
+
+/*includes*/
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
+
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
+
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -12,9 +19,9 @@
  */
 typedef struct listint_s
 {
-	const int n;
-	struct listint_s *prev;
-	struct listint_s *next;
+    const int n;
+    struct listint_s *prev;
+    struct listint_s *next;
 } listint_t;
 
 void bubble_sort(int *array, size_t size);
@@ -38,4 +45,6 @@ void radix_sort(int *array, size_t size);
 int getCantRep(int num);
 void swap_root(int *array, size_t root, size_t hi, size_t size);
 void heap_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
 #endif
